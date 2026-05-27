@@ -1,16 +1,83 @@
-# Construction Planner (ML + FastAPI + PySide6)
+**Construction Planner** 
 
-## Setup
+**Project Description**
 
-### 1) Train ML Model
-cd backend
-pip install -r requirements.txt
-python app/services/ml_model.py
+Construction Planner ML is an AI-powered desktop application developed to help users estimate construction costs intelligently using Machine Learning. The system predicts future material prices, labour expenses, total project cost, construction duration, and the best time to start construction based on historical market trends, seasonal patterns, and temperature conditions.
 
-### 2) Run Backend
+The application combines a modern desktop interface with machine learning models and backend APIs to provide accurate construction planning insights for residential projects.
+
+
+**Technologies & Libraries Used**
+
+Frontend:
+->PySide6 → Desktop GUI development
+->Matplotlib → Graph visualization and analytics
+
+Backend:
+->FastAPI → REST API development
+->Uvicorn → Backend server
+
+Machine Learning:
+->Scikit-learn → ML model training and prediction
+->Random Forest Regressor → Non-linear prediction model
+->Linear Regression → Trend-based forecasting
+->Pandas → Dataset processing and analysis
+->NumPy → Numerical computations
+->Joblib → Saving and loading ML models
+
+Database & Authentication:
+->SQLite → Lightweight database
+->SQLAlchemy → ORM and database management
+->Passlib → Password hashing utilities
+->Argon2 → Secure password hashing algorithm
+
+Other Libraries:
+->Requests → Frontend-backend API communication
+
+
+**Project Structure**
+
+Construction-Planner-ML/
+│
+├── backend/
+│   ├── core/
+│   │   ├── services/
+│   │   │   ├── cost_service.py
+│   │   │   └── ml_service.py
+│   │   ├── api.py
+│   │   ├── db.py
+│   │   ├── models.py
+│   │   └── auth_service.py
+│   │
+│   ├── data/
+│   │   └── material_rates.csv
+│   │
+│   ├── models/
+│   │   ├── rf_model.pkl
+│   │   └── lr_model.pkl
+│   │
+│   └── main.py
+│
+├── frontend/
+│   ├── assets/
+│   │   └── logo.png
+│   │
+│   ├── ui/
+│   │   ├── login_window.py
+│   │   ├── signup_window.py
+│   │   └── main_window.py
+│   │
+│   └── main.py
+│
+├── requirements.txt
+└── README.md
+
+**Setup**
+1) Train ML Model
+cd backend pip install -r requirements.txt python app/services/ml_model.py
+
+2) Run Backend
 uvicorn app.main:app --reload
 
-### 3) Run Frontend
-cd ../frontend
-pip install -r requirements.txt
-python app.py
+3) Run Frontend
+cd ../frontend pip install -r requirements.txt python app.py
