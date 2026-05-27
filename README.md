@@ -35,43 +35,6 @@ Other Libraries:
 ->Requests → Frontend-backend API communication
 
 
-**Project Structure**
-
-Construction-Planner-ML/
-│
-├── backend/
-│   ├── core/
-│   │   ├── services/
-│   │   │   ├── cost_service.py
-│   │   │   └── ml_service.py
-│   │   ├── api.py
-│   │   ├── db.py
-│   │   ├── models.py
-│   │   └── auth_service.py
-│   │
-│   ├── data/
-│   │   └── material_rates.csv
-│   │
-│   ├── models/
-│   │   ├── rf_model.pkl
-│   │   └── lr_model.pkl
-│   │
-│   └── main.py
-│
-├── frontend/
-│   ├── assets/
-│   │   └── logo.png
-│   │
-│   ├── ui/
-│   │   ├── login_window.py
-│   │   ├── signup_window.py
-│   │   └── main_window.py
-│   │
-│   └── main.py
-│
-├── requirements.txt
-└── README.md
-
 **Setup**
 1) Train ML Model
 cd backend pip install -r requirements.txt python app/services/ml_model.py
