@@ -12,15 +12,22 @@ DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "..", "data", "materia
 # MATERIAL CALCULATION
 # -----------------------------
 def calculate_material(area, floors):
+
     total_area = area * floors
+
+    cement = round(total_area * 0.4)
+    steel = round(total_area * 4)
+    sand = round(total_area * 1.8)
+    aggregate = round(total_area * 1.5)
+    brick = round(total_area * 8)
 
     return {
         "area": total_area,
-        "cement": round(total_area * 0.4),
-        "steel": round(total_area * 4),
-        "sand": round(total_area * 1.8),
-        "aggregate": round(total_area * 1.5),
-        "brick": round(total_area * 8)
+        "cement": cement,
+        "steel": steel,
+        "sand": sand,
+        "aggregate": aggregate,
+        "brick": brick
     }
 
 

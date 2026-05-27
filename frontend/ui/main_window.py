@@ -58,13 +58,13 @@ class MainWindow(QWidget):
         logo_layout.addWidget(title)
 
         self.area = QLineEdit()
-        self.area.setPlaceholderText("Area (sqft)")
+        self.area.setPlaceholderText("Plot Area (sqft)")
 
         self.floors = QLineEdit()
-        self.floors.setPlaceholderText("Floors")
+        self.floors.setPlaceholderText("No. of Floors")
 
         self.year = QLineEdit()
-        self.year.setPlaceholderText("Year")
+        self.year.setPlaceholderText("Construction Year")
 
         self.btn = QPushButton("Predict")
         self.btn.clicked.connect(self.predict)
@@ -211,30 +211,40 @@ class MainWindow(QWidget):
 
             # BREAKDOWN TEXT
             text = f"""
+======== MATERIAL REQUIRED ========
+
+Cement      : {res['materials']['cement']} bags
+Steel       : {res['materials']['steel']} kg
+Sand        : {res['materials']['sand']} cft
+Aggregate   : {res['materials']['aggregate']} cft
+Bricks      : {res['materials']['brick']} units
+
+======== COST BREAKDOWN ========
+
 Civil:
-   Material: ₹{res['civil']['material']}
-   Labour: ₹{res['civil']['labour']}
-   Total: ₹{res['civil']['total']}
+   Material : ₹{res['civil']['material']}
+   Labour   : ₹{res['civil']['labour']}
+   Total    : ₹{res['civil']['total']}
 
 Electrical:
-   Material: ₹{res['electrical']['material']}
-   Labour: ₹{res['electrical']['labour']}
-   Total: ₹{res['electrical']['total']}
+   Material : ₹{res['electrical']['material']}
+   Labour   : ₹{res['electrical']['labour']}
+   Total    : ₹{res['electrical']['total']}
 
 Plumbing:
-   Material: ₹{res['plumbing']['material']}
-   Labour: ₹{res['plumbing']['labour']}
-   Total: ₹{res['plumbing']['total']}
+   Material : ₹{res['plumbing']['material']}
+   Labour   : ₹{res['plumbing']['labour']}
+   Total    : ₹{res['plumbing']['total']}
 
 Tiles:
-   Material: ₹{res['tiles']['material']}
-   Labour: ₹{res['tiles']['labour']}
-   Total: ₹{res['tiles']['total']}
+   Material : ₹{res['tiles']['material']}
+   Labour   : ₹{res['tiles']['labour']}
+   Total    : ₹{res['tiles']['total']}
 
 Paint:
-   Material: ₹{res['paint']['material']}
-   Labour: ₹{res['paint']['labour']}
-   Total: ₹{res['paint']['total']}
+   Material : ₹{res['paint']['material']}
+   Labour   : ₹{res['paint']['labour']}
+   Total    : ₹{res['paint']['total']}
 """
             self.breakdown_text.setText(text)
 
