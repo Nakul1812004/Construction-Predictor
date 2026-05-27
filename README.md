@@ -9,30 +9,30 @@ The application combines a modern desktop interface with machine learning models
 
 **Technologies & Libraries Used**
 
-Frontend:
-->PySide6 → Desktop GUI development
-->Matplotlib → Graph visualization and analytics
+Frontend:  
+->PySide6 → Desktop GUI development  
+->Matplotlib → Graph visualization and analytics  
 
-Backend:
-->FastAPI → REST API development
-->Uvicorn → Backend server
+Backend:  
+->FastAPI → REST API development  
+->Uvicorn → Backend server  
 
-Machine Learning:
-->Scikit-learn → ML model training and prediction
-->Random Forest Regressor → Non-linear prediction model
-->Linear Regression → Trend-based forecasting
-->Pandas → Dataset processing and analysis
-->NumPy → Numerical computations
-->Joblib → Saving and loading ML models
+Machine Learning:  
+->Scikit-learn → ML model training and prediction  
+->Random Forest Regressor → Non-linear prediction model  
+->Linear Regression → Trend-based forecasting   
+->Pandas → Dataset processing and analysis  
+->NumPy → Numerical computations  
+->Joblib → Saving and loading ML models  
 
-Database & Authentication:
-->SQLite → Lightweight database
-->SQLAlchemy → ORM and database management
-->Passlib → Password hashing utilities
-->Argon2 → Secure password hashing algorithm
+Database & Authentication:  
+->SQLite → Lightweight database  
+->SQLAlchemy → ORM and database management  
+->Passlib → Password hashing utilities  
+->Argon2 → Secure password hashing algorithm  
 
-Other Libraries:
-->Requests → Frontend-backend API communication
+Other Libraries:  
+->Requests → Frontend-backend API communication  
 
 
 **Setup**
