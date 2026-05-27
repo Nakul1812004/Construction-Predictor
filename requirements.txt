@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pandas
+scikit-learn
+joblib
+pyside6
+matplotlib
+requests
+passlib[argon2]
+sqlalchemy
