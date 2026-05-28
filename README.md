@@ -45,3 +45,9 @@ uvicorn core.main:app --reload
 
 3) Run Frontend  
 cd ../frontend pip install -r requirements.txt python app.py
+
+
+**Team Members**  
+Nakul Agrawal(EN23CS301646)    
+Naman Patil(EN23CS301653)  
+Naman Mathe(EN23CS301652)  
