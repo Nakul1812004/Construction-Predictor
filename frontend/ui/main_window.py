@@ -58,24 +58,24 @@ class MainWindow(QWidget):
         logo_layout.addWidget(title)
 
         self.area = QLineEdit()
-        self.area.setPlaceholderText("Plot Area (sqft)")
+        self.area.setPlaceholderText("In sqft")
 
         self.floors = QLineEdit()
-        self.floors.setPlaceholderText("No. of Floors")
+        self.floors.setPlaceholderText("Integer Value")
 
         self.year = QLineEdit()
-        self.year.setPlaceholderText("Construction Year")
+        self.year.setPlaceholderText("Starting Year")
 
         self.btn = QPushButton("Predict")
         self.btn.clicked.connect(self.predict)
 
         left_layout.addLayout(logo_layout)
         left_layout.addSpacing(20)
-        left_layout.addWidget(QLabel("Area"))
+        left_layout.addWidget(QLabel("Plot Area"))
         left_layout.addWidget(self.area)
-        left_layout.addWidget(QLabel("Floors"))
+        left_layout.addWidget(QLabel("No. of Floors"))
         left_layout.addWidget(self.floors)
-        left_layout.addWidget(QLabel("Year"))
+        left_layout.addWidget(QLabel("Construction Year"))
         left_layout.addWidget(self.year)
         left_layout.addSpacing(20)
         left_layout.addWidget(self.btn)
